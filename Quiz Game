@@ -1,40 +1,45 @@
-print ("Welcome to my computer quiz!")
+print("Welcome to Quiz Game")
 
-#Asking user if they want to play the game, if not we quit the application
-playing = input("Do you want to play? ")
-
-if playing.lower() != "yes":
+# Asking if user wants to play game, if not quit application 
+play_game = input("Do you want to play? ")
+if play_game.lower() != ("yes"):
     quit()
 
-print ("Okay! Let's play :) ")
-score = 0
+print ("Lets get to quizzing")
+score = 0 
+print (score)
 
-answer = input ("What does CPU stand for? ")
-
-if answer.lower()== "central processing unit":
+#Asking questions
+question = input ("What is CC? ")
+if question.lower() == ("cybersecurity"):
     print("Correct!")
-    score += 1
-    
+    score = score + 1
+    print (score)
 else:
-    print("Incorrect!")
+    print("Incorrect")
 
-answer = input ("What Is CIA in Cybersecurity? ")
-
-if answer.lower() == "confidentiality, integrity, availability":
+question = input ("What is C In the CIA Triad? ")
+if question.lower() == ("confidentiality"):
     print("Correct!")
-    score += 1
-    
+    score = score + 1 
+    print (score)
 else:
-    print("Incorrect!")
+    print("Incorrect")
 
-answer = input ("What does VPN stand for? ")
-
-if answer.lower() == "virtual private network":
+question = input ("What is C In the I Triad? ")
+if question.lower() == ("integrity"):
     print("Correct!")
-    score += 1
-
+    score = score + 1 
+    print (score)
 else:
-    print("Incorrect!")
+    print("Incorrect")
 
-print("You got " +  str(score)  + " questions correct")
- 
+print ("Congratulations, Your Done!!")
+if score == 3:
+    print("You got Perfect!!")
+
+if score == 1:
+    print("You only got 1.... I would try again")
+
+if score == 2:
+    print("You got 50%. Well Done")
